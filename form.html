@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #cc954d;
+        }
+        .dif{
+            border: 1px solid ;
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 10%;
+            padding: 10px;
+            background-color: rgb(224, 140, 13);
+        }
+        .but{
+            background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+        }
+        .hh{
+            color: whitesmoke;
+        }
+    </style>
+    </style>
+
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["name"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var password = document.forms["myForm"]["password"].value;
+            var confirmPassword = document.forms["myForm"]["confirmPassword"].value;
+
+            if (name == "" || email == "" || password == "" || confirmPassword == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+
+            if (password != confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            alert("Form submitted successfully");
+            return true;
+        }
+    </script>
+
+</head>
+<body>
+    <div class="dif">
+        <h1>Registration Form</h1>
+        <form name="myForm" onsubmit="return validateForm()">
+            Name: <input type="text" name="name"><br><br>
+            Email: <input type="email" name="email"><br><br>
+            Password: <input type="password" name="password"><br><br>
+            Confirm Password: <input type="password" name="confirmPassword"><br><br>
+            <input type="submit" value="Submit" class="but">
+        </form>
+    </div>
+</body>
+</html>
